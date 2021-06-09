@@ -1240,6 +1240,8 @@ func TestResponseContentTypeNoDefaultNotEmpty(t *testing.T) {
 	if strings.Contains(headers, "Content-Type: \r\n") {
 		t.Fatalf("ResponseContentTypeNoDefaultNotEmpty fail, response: \n%+v\noutcome: \n%q\n", h, headers) //nolint:govet
 	}
+
+	t.Logf("%s", headers)
 }
 
 func TestRequestContentTypeDefaultNotEmpty(t *testing.T) {

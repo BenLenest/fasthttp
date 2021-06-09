@@ -1648,10 +1648,10 @@ func (resp *Response) Write(w *bufio.Writer) error {
 	}
 
 	body := resp.bodyBytes()
-	bodyLen := len(body)
+	/*bodyLen := len(body)
 	if sendBody || bodyLen > 0 {
 		resp.Header.SetContentLength(bodyLen)
-	}
+	}*/
 	if err := resp.Header.Write(w); err != nil {
 		return err
 	}
